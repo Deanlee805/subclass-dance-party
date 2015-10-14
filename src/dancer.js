@@ -15,6 +15,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 makeDancer.prototype.step = function() {
 
   //console.log('ran');
+
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
