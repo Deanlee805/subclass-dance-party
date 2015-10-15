@@ -3,6 +3,13 @@ var GrowImage = function(x, y, z, timeBetweenSteps, docHeight, docWidth, imgSour
   this.$node = $('<img class="growImage" src="' + imgSource + '"></img>');
   
   this.step();
+
+  this.$node.on('click', function(event){
+    $(this).attr('src', './img/explosion.gif');
+    setTimeout(function(){
+      $(this).remove();
+    }.bind(this), 500);
+  });
 };
 
 GrowImage.prototype = Object.create(MoveStar.prototype);

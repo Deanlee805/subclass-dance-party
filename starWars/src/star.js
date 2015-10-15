@@ -10,6 +10,8 @@ var Star = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
   this.docHeight = docHeight;
   this.docWidth = docWidth;
 
+  this.timer;
+
   //register step
   this.step();
   
@@ -18,7 +20,7 @@ var Star = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
 };
 
 Star.prototype.step = function() {
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  this.timer = setTimeout(this.step.bind(this), this.timeBetweenSteps); 
 };
 
 Star.prototype.setPosition = function() {

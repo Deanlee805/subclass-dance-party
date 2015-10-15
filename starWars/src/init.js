@@ -19,9 +19,6 @@ $(document).ready(function() {
     }
 
   $(document).on("keypress", function(event) {
-      
-      console.log(event.keyCode);
-
       // Create a TieFighter
       if ( event.keyCode === 116 ){
       var tiefighter = new GrowImage(
@@ -34,14 +31,13 @@ $(document).ready(function() {
       $('body').append(tiefighter.$node);
       }
 
-
       if (event.keyCode === 104) {
         $('.hyperspace').toggle();
         // append class to body
       }
-
-
   });
+
+  // $(document).on
 
    
     var starMakerFunctionName = $(this).data("star-function-name");
