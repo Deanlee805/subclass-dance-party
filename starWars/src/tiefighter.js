@@ -5,8 +5,3 @@ var Tiefighter = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
 
 Tiefighter.prototype = Object.create(MoveStar.prototype);
 Tiefighter.prototype.constructor = Tiefighter;
-
-// Tiefighter.prototype.step = function(){
-//   MoveStar.prototype.step.call(this);
-// };
-

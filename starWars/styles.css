@@ -21,10 +21,15 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .star{
-  border:2px solid white;
+  border:2px;
+  border-style: solid;
+  border-color: white;
   border-radius:2px;
   position:absolute;
 }
 .tiefighter{
+  position:absolute;
+}
+.falcon{
   position:absolute;
 }

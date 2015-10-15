@@ -1,10 +1,7 @@
 var MoveStar = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
-  // use jQuery to create an HTML <span> tag
   Star.apply(this, arguments);
 
 };
-
-
 
 MoveStar.prototype = Object.create(Star.prototype);
 MoveStar.prototype.constructor= MoveStar;
