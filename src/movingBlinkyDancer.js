@@ -1,5 +1,6 @@
 var makeMovingBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<img class="tiefighter" src="img/tiefighter.png"></img>');
   this.top = top;
   this.left = left;
 };
@@ -15,14 +16,8 @@ makeMovingBlinkyDancer.prototype.step = function() {
 
   var styleSettings = {
       top: this.top,
-      left: this.left + 100
-    };
+      left: this.left,
+  };
   this.$node.css(styleSettings);
-
-  console.log(styleSettings);
-  console.log(this.top);
-
-  // this.top = this.top + 100;
-  // this.left = this.left + 100;
-  // this.$node.css({top: this.top, left: this.left});
+  //this.$node.css('background-image', 'url(img/tiefighter.png)');
 };

@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:white;
+  background-color:black;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -20,11 +20,8 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
+.star{
+  border:10px solid white;
   border-radius:10px;
-  position:absolute;
-}
-.tiefighter{
   position:absolute;
 }
