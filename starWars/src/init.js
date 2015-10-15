@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   // make a star with a random position
     for (var i = 0; i < 100; i++){
-      var star = new MoveStar(
+      var star = new GrowStar(
         randomInRange(25),
         randomInRange(25),
         Math.floor( 32 * Math.random() + 1),
@@ -20,17 +20,17 @@ $(document).ready(function() {
 
   $(document).on("keypress", function(event) {
       
+      // Create a TieFighter
       if ( event.keyCode === 116 ){
-      var tiefighter = new Tiefighter(
+      var tiefighter = new GrowImage(
         randomInRange(25),
         randomInRange(25),
-        Math.floor( 32 * Math.random() + 1),
-        50, $('body').height(), $('body').width() 
+        32,
+        50, $('body').height(), $('body').width(),
+        "../img/tiefighter.png"
       );
       $('body').append(tiefighter.$node);
-        
       }
-
 
   });
 
