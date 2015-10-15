@@ -1,33 +1,31 @@
 $(document).ready(function() {
   window.stars = [];
 
-  $(".addStarButton").on("click", function(event) {
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on dancefloor.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
+  var randomInRange = function(n){
+      var sign = Math.random() > 0.5 ? 1 : -1;
+      var number = sign * Math.floor( Math.random() * n);
+      return number;
+  };
 
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */
+  $(".addStarButton").on("click", function(event) {
+   
     var starMakerFunctionName = $(this).data("star-function-name");
 
     // get the maker function for the kind of dancer we're supposed to make
     var starMakerFunction = window[starMakerFunctionName];
 
+    
     // make a dancer with a random position
+    for (var i = 0; i < 100; i++){
+      var star = new starMakerFunction(
+        randomInRange(25),
+        randomInRange(25),
+        Math.floor( 32 * Math.random() + 1),
+        50, $('body').height(), $('body').width() 
+      );
+      $('body').append(star.$node);      
+    }
 
-    var star = new starMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(star.$node);
   });
 });
 
