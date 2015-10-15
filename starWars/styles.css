@@ -5,23 +5,11 @@ body{
   margin: 0px;
   background-color:black;
   font-size: 18px;
+  overflow: hidden;
 }
-body, a:link, a:visited, a:active{
-  color: lightblue;
-}
-.title, .addStarButton{
-  padding:5px 12px;
-  float:right;
-}
-.topbar{
-  height:32px;
-  background-color: #555;
-}
-.title{
-  background-color: #777;
-}
+
 .star{
-  border:2px;
+  border: 2px;
   border-style: solid;
   border-color: white;
   border-radius:2px;

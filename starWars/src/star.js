@@ -10,8 +10,6 @@ var Star = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
   this.docHeight = docHeight;
   this.docWidth = docWidth;
 
-  console.log(this.docWidth, this.docHeight);
-
   //register step
   this.step();
   
