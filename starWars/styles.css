@@ -37,6 +37,12 @@ body{
   background-size: cover;
   display:none;
 }
+.laser{
+  background: red;
+  transform-origin: 0 100%;
+  height: 3px;
+
+}
 .falcon{
   position:absolute;
   z-index: 5;
