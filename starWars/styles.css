@@ -50,5 +50,15 @@ body{
   z-index: 6;
   left: 50px;
   bottom: 0;
-  color: white;
+  color: yellow;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 40px;
+  color: yellow;
+  position: absolute;
+  left: 50px;
+  z-index: 10;
+  pointer-events: none;
 }

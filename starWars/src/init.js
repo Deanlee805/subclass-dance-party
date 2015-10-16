@@ -3,6 +3,7 @@ $(document).ready(function() {
   window.enemies = [];
   window.score = 0;
 
+
   // make stars
   for (var i = 0; i < 100; i++){
      buildStar();     
