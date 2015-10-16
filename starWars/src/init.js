@@ -16,9 +16,14 @@ $(document).ready(function() {
     }
   }, 2000);
 
+  $('body').on('click', function(event){
+    $('#laser').get(0).play();
+  });
+
   //listen for click on tie fighter
   $('body').on('click', '.growImage', function(event){
     window.score++;
+    $('#explosion').get(0).play();
     $('#score').text(score);
     $(this).attr('src', './img/explosion.gif');
     setTimeout(function(){
