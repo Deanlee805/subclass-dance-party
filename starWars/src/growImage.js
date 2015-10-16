@@ -22,9 +22,15 @@ GrowImage.prototype.step = function(){
   console.log(this.$node);
 
   if(this.z <= 0.5 ){ 
-    $('body').find('.falcon').toggleClass('shake');
+    $('body').find('.falcon').addClass('shake');
     $('body').find('.injury').toggle();
     $('body').find('#hurt').get(0).play();
+
+    setTimeout(function() {
+      $('body').find('.falcon').removeClass('shake');
+      $('body').find('.injury').toggle();
+    }, 1000);
+
   }
 
   MoveStar.prototype.step.call(this);

@@ -29,9 +29,8 @@ $(document).ready(function() {
     $('#explosion').get(0).play();
     $('#score').text(score);
     $(this).attr('src', './img/explosion.gif').data('kill','killed');
-    setTimeout(function(){
-      //this.remove();
-    }.bind(this), 500);
+    // setTimeout(function(){
+    // }.bind(this), 500);
   });
 
   //listen for key presses

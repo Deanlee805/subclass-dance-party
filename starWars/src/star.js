@@ -50,6 +50,8 @@ Star.prototype.setPosition = function() {
   // not sure what this does anymore
   Star.prototype.kill = function(){
     console.log("kill fn");
-    this.$node.remove();
-    clearTimeout(this.timer);
+    setTimeout(function(){
+      this.remove();
+      clearTimeout(this.timer);
+    }.bind(this.$node), 500);
   };
