@@ -39,3 +39,8 @@ Star.prototype.setPosition = function() {
   // debugger;
     this.$node.css(styleSettings);
   };
+
+  Star.prototype.remove = function(){
+    this.$node.remove();
+    clearTimeout(this.timer);
+  };

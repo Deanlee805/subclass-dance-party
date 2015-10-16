@@ -1,15 +1,9 @@
 var GrowImage = function(x, y, z, timeBetweenSteps, docHeight, docWidth, imgSource) {
   MoveStar.apply(this, arguments);
-  this.$node = $('<img class="growImage" src="' + imgSource + '"></img>');
+  this.$node = $('<img draggable="false" class="growImage" src="' + imgSource + '"></img>');
   
   this.step();
 
-  this.$node.on('click', function(event){
-    $(this).attr('src', './img/explosion.gif');
-    setTimeout(function(){
-      $(this).remove();
-    }.bind(this), 500);
-  });
 };
 
 GrowImage.prototype = Object.create(MoveStar.prototype);
