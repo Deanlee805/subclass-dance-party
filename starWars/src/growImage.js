@@ -20,9 +20,9 @@ GrowImage.prototype.step = function(){
     this.$node.removeClass('growImage-right');
   }
 
-  if(this.z <= 0){
-    $('body').trigger('attack');
-  }
+  // if(this.z <= 0){
+  //   $('body').trigger('attack');
+  // }
 
   MoveStar.prototype.step.call(this);
-}
+};

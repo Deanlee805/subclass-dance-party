@@ -15,4 +15,4 @@ GrowStar.prototype.step = function(){
   // largest size when cloest
 
   MoveStar.prototype.step.call(this);
-}
+};
