@@ -12,6 +12,8 @@ var Star = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
 
   this.timer;
 
+  this.destroyed = false;
+
   //register step
   this.step();
   
@@ -20,7 +22,12 @@ var Star = function(x, y, z, timeBetweenSteps, docHeight, docWidth) {
 };
 
 Star.prototype.step = function() {
-  this.timer = setTimeout(this.step.bind(this), this.timeBetweenSteps); 
+  if (this.$node.data('kill') === 'killed'){
+    this.kill();
+  } else {
+    this.timer = setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  }
+   
 };
 
 Star.prototype.setPosition = function() {
@@ -40,7 +47,9 @@ Star.prototype.setPosition = function() {
     this.$node.css(styleSettings);
   };
 
-  Star.prototype.remove = function(){
+  // not sure what this does anymore
+  Star.prototype.kill = function(){
+    console.log("kill fn");
     this.$node.remove();
     clearTimeout(this.timer);
   };

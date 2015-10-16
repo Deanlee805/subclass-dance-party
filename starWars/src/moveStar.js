@@ -9,6 +9,7 @@ MoveStar.prototype.constructor= MoveStar;
 MoveStar.prototype.step = function() {
 
   Star.prototype.setPosition.call(this);
+  
   this.z -= 0.2;
 
   if(this.z <= 0){
@@ -17,7 +18,6 @@ MoveStar.prototype.step = function() {
     //place as far away as possible
     this.z = 31;
   }
-
 
   Star.prototype.step.call(this);
   

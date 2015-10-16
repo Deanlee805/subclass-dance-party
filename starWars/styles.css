@@ -37,12 +37,23 @@ body{
   background-size: cover;
   display:none;
 }
+.injury{
+  position: absolute;
+  z-index:100;
+  width:100%;
+  height:100%;
+  background-color: red;
+  opacity:0.4;
+  display:none;
+  pointer-events: none;
+}
+/*
 .laser{
   background: red;
   transform-origin: 0 100%;
   height: 3px;
-
 }
+*/
 .falcon{
   position:absolute;
   z-index: 5;
